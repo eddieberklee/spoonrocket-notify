@@ -5,8 +5,12 @@
 		%meta{ :content => "", :name => "description" }
 		%meta{ :content => "", :name => "author" }
 		%meta{ :content => "3 days", :name => "revisit-after" }
+		%meta{ :name => "viewport", :content => "width=device-width, initial-scale=1"}
+
 		%link{ :href => "http://creativecommons.org/licenses/by/3.0/", :rel => "license", :title => "Creative Commons Attribution 3.0 Unported License" }
 		%link{ :href => "/feed", :rel => "alternate", :title => "Atom", :type => "application/atom+xml" }
+		%link{ :href => "http://fonts.googleapis.com/css?family=Montserrat:400,700", :rel => "stylesheet", :type => "text/css" }
+		%link{ :href => "http://fonts.googleapis.com/css?family=Lato:400,700", :rel => "stylesheet", :type => "text/css" }
 		%link{ :href => "/css/bootstrap.min.css", :media => "screen", :rel => "stylesheet" }
 		%link{ :href => "/css/docs.min.css", :media => "screen", :rel => "stylesheet" }
 		%link{ :href => "/css/style.sass.css", :media => "screen", :rel => "stylesheet" }
@@ -78,28 +82,29 @@
 						%span.label.label-danger
 							Beep!
 						
-						%h2= "SpoonRocket Notifier"
+						.getnotified-main
+							%h2= "SpoonRocket Notifier"
 
-						%h5= "Enter your email for whenever SpoonRocket is out of food. We'll notify you as soon as they're in stock again!"
-						
-						%input{ :type => "text", :class => "form-control col6", :placeholder => "Enter your email..", }
-						
-						%button{ :type => "button", :class => "btn btn-warning", :style => "width:100px;height:100px;border-radius:50px;" }
-							%span{ :class => "glyphicon glyphicon-bell", :style => "font-size:2.4em;" }
+							.col-md-3
+							.col-md-6
+								%h5{ :style => "font-size:1.2em;" }
+									Enter your email for whenever SpoonRocket is out of food. We'll notify you as soon as they're in stock again!
+								
+								%input{ :type => "text", :class => "form-control col6", :placeholder => "Enter your email..", }
+							.col-md-3
+							
 							%br
-							%span{ :style => "font-size:1.0em;" }
-								Get Notified
-						
-						%button{ :style => "background-color:orange;width:40px;height:40px;line-height:40px;border-radius:20px;text-align:center;border:0;margin:2px;" }
-							%span{ :class => "glyphicon glyphicon-inbox", :style => "color:white;font-size:1.3em;position:relative;top:3px;left:1px;", }
 
-						.btn-group
-							%button{ :type => "button", :class => "btn btn-success dropdown-toggle", "data-toggle" => "dropdown", }
-								Action
-							%ul.dropdown-menu{ :role => "menu", }
-								%li
-									%a{ :href => "#", }
-										Something
+							%p
+								%button{ :type => "button", :class => "btn btn-warning", :style => "width:100px;height:100px;border-radius:50px;" }
+									%span{ :class => "glyphicon glyphicon-bell", :style => "font-size:2.4em;position:relative;top:-1px;left:3px;	" }
+									%br
+									%span{ :style => "font-size:1.0em;text-transform:uppercase;font-family:'Montserrat',sans-serif;" }
+										Get
+										%br
+										%span{ :style => "position:relative;top:-3px;" }
+											Notified
+						
 			%footer
 				%p
 					Copyright 2011 My Name
